@@ -1,32 +1,5 @@
 ## level edit 12/16/23
 
-Best So Far! Thoughts
-
-1. Add more lines with the necessary B stages M1, M10, M16, M24. Need a lotta bytes
-2. Try to split this between more memory locations. For example JMP inc could go to a theoretical 2nd half with more conditions
-3. any new subroutine needs 14 bytes minimum for INC, LDA, CMP, BEQ, JMP ???, RTS. And it handles just one condition.
-4. Need to handle 4 more conditions...
-
-
-### Works! But breaks B-stages :( :(
-### Try starting earlier FFDB rom: 01FFEB - 26 bytes
-; 0411 is energy tens
-; caller needs to JSR 20 DB FF; AD 15 07
-inc:
-INC $1507   ; EE 15 07
-LDA $1507   ; AD 15 07
-CMP #$06    ; C9 0A     ; M6
-BEQ end     ; F0 0F     ; skip next bytes to label:end
-CMP #$10    ; C9 12     ; M10
-BEQ end     ; F0 0B     ; skip next bytes to label:end
-CMP #$16    ; C9 1E     ; M16
-BEQ end     ; F0 07     ; skip next bytes to label:end
-CMP #$24    ; C9 2E     ; M24
-BEQ end     ; F0 03
-JMP inc     ; 4C DB FF  ; jump to INX instruction address
-end:
-RTS         ; 60
-
 ### Others
 
 Insert code at 07:FFE5 in the debugger. 01FFF5 in the rom, gives 11 bytes

@@ -1,3 +1,5 @@
+; Run this in the simulator @ https://skilldrick.github.io/easy6502/
+
 LDA #$17
 STA $0715
 JSR inc
