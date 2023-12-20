@@ -4,8 +4,14 @@ My First NES Romhack has 2 goals:
 1. 1943's soundtrack is amazing, but quickly spoiled when you are below 20 energy and the warning music plays. This hack removes the warning music so you can enjoy Kumi Yamaga's stage music without interruption.
 2. The original game has 24 levels, which I consider far too long. Modern SHMUPS typically have a 5 level structure and can be completed in about 30 minutes. This hack molds 1943 into that structure.
 
+TODO: update to add M3
+TODO: publish to romhacks site
+TODO: News post
 
 ## Misc. Notes
+
+m3 bomber no 3b
+m9 bomber no 9b
 
 0411 10's digit energy - look for this to go < 2
 0410 1's digit, don't think we need to worry about it
@@ -14,6 +20,13 @@ key breakpoint
 
 address: F48F
 condition: $0411==#01
+
+## Change upgrade points
+
+$0347 is upgrade points
+
+code:
+06:A5BE ; A9 03 ; Sets points to always be 3 on start & pickup
 
 ### New Code during my frame break sequence
 

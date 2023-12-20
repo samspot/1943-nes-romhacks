@@ -25,7 +25,9 @@ inc:        ; address is: $C4F3
 INC $0715   ; EE 15 07
 LDA $0715   ; AD 15 07
 CMP #$01    ; C9 01     ; M1-B
-BEQ end     ; F0 1F
+BEQ end     ; F0 21     ; CHECK
+CMP #$03    ; C9 03     ; M3
+BEQ end     ; F0 1F     ; CHECK (but was reused prolly perfect)
 CMP #$06    ; C9 0A     ; M6
 BEQ end     ; F0 1B     ; skip ?? bytes to label:end
 CMP #$10    ; C9 12     ; M10
