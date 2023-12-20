@@ -4,9 +4,7 @@ My First NES Romhack has 2 goals:
 1. 1943's soundtrack is amazing, but quickly spoiled when you are below 20 energy and the warning music plays. This hack removes the warning music so you can enjoy Kumi Yamaga's stage music without interruption.
 2. The original game has 24 levels, which I consider far too long. Modern SHMUPS typically have a 5 level structure and can be completed in about 30 minutes. This hack molds 1943 into that structure.
 
-TODO: update to add M3
-TODO: publish to romhacks site
-TODO: News post
+TODO: News post https://www.romhacking.net/news/addentrypage/
 
 ## Misc. Notes
 
